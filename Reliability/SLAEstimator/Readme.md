@@ -1,6 +1,6 @@
 # Important Note
 This app is cloned from the following Repo
-https://github.com/mspnp/samples![image](https://user-images.githubusercontent.com/13979783/120475909-9889ad80-c3c7-11eb-84a8-54b8daa38889.png)
+https://github.com/mspnp/samples
 
 # Service Level Agreement Estimator sample app
 
