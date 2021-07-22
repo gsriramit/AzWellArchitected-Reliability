@@ -70,7 +70,10 @@ namespace WebComponentHealthSystem.Common
             parseStatus = DateTime.TryParseExact(eventTime, twelveHourTimeFormat, provider,
                                                     DateTimeStyles.AllowInnerWhite,out parsedDate);
             if(!parseStatus)
-                parseStatus = DateTime.TryParseExact(eventTime, twentyHourTimeFormat, provider,
+                parseStatus = DateTime.TryParseExact(eventTime, twentyfourHourTimeFormat, provider,
+                                                    DateTimeStyles.AllowInnerWhite, out parsedDate);
+            if (!parseStatus)
+                parseStatus = DateTime.TryParseExact(eventTime, twentyfourHourTimeFormat2, provider,
                                                     DateTimeStyles.AllowInnerWhite, out parsedDate);
             if (!parseStatus)
                 parsedDate = DateTime.Parse(eventTime);
@@ -79,8 +82,8 @@ namespace WebComponentHealthSystem.Common
         }
 
         private const string twelveHourTimeFormat = "M/dd/yyyy h:mm:ss tt";
-        private const string twentyHourTimeFormat = "M/dd/yyyy h:mm:ss";
-
+        private const string twentyfourHourTimeFormat = "M/dd/yyyy h:mm:ss";
+        private const string twentyfourHourTimeFormat2 = "dd-MM-yyyy HH:mm:ss";
     }
 
     
