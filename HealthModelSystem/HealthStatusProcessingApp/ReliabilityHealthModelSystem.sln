@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30709.132
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AzureHealthAlertProcessingSystem", "FunctionApp1\AzureHealthAlertProcessingSystem.csproj", "{C22D616A-85CB-4A97-8F04-A51934B1111B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureRealtimeUpdatesProcessingSystem", "AzureRealtimeUpdatesProcessingSystem\AzureRealtimeUpdatesProcessingSystem.csproj", "{45D0658C-5270-45C8-9007-E12D24B52B29}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AzureRealtimeUpdatesProcessingSystem", "AzureRealtimeUpdatesProcessingSystem\AzureRealtimeUpdatesProcessingSystem.csproj", "{45D0658C-5270-45C8-9007-E12D24B52B29}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
