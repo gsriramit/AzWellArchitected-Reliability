@@ -1,0 +1,160 @@
+[
+  {
+    "ComponentName": "virtualmachinescalesets",
+    "id": "vmss-app-dev01-resourcehealth",
+    "ModelType": "Resource Health",
+    "ModelSubtype": "",
+    "CurrentHealthStatus": "Unvailable",
+    "PreviousHealthStatus": "Available",
+    "EventDetails": {
+      "CorrelationId": "658c4858-e0cf-46aa-bfd4-4a31d925408b",
+      "EventTimestamp": "09-07-2021 13:28:14",
+      "OperationId": "3bad0e39-eee6-45b5-adf6-06e08ac6bfa6",
+      "EventType": "Downtime",
+      "EventCause": "PlatformInitiated"
+    }
+  },
+  {
+    "ComponentName": "virtualmachinescalesets",
+    "id": "vmss-app-dev01-ServiceHealth",
+    "ModelType": "Service Health",
+    "ModelSubtype": "",
+    "CurrentHealthStatus": "Maintenance",
+    "PreviousHealthStatus": null,
+    "EventDetails": {
+      "EventDataId": "9d20890d-dc96-47b7-91d6-a7440b374069",
+      "alertLevel": "Informational",
+      "CorrelationId": "dedb973a-cd20-4386-bbcf-12b92d2271bf",
+      "EventTimestamp": "08-07-2021 11:07:00",
+      "OperationName": "Microsoft.ServiceHealth/maintenance/action",
+      "OperationId": "9d20890d-dc96-47b7-91d6-a7440b374069",
+      "EventType": "Maintenance",
+      "EventCause": "Maintenance"
+    }
+  },
+  {
+    "ComponentName": "virtualmachinescalesets",
+    "id": "vmss-app-dev01-PlatformMetrics-PercentageCPU",
+    "ModelType": "Platform Health",
+    "ModelSubtype": "PercentageCPU",
+    "CurrentHealthStatus": "Healthy",
+    "PreviousHealthStatus": null,
+    "EventDetails": {
+      "EventDataId": null,
+      "alertLevel": "Sev2",
+      "CorrelationId": null,
+      "EventTimestamp": "12-07-2021 14:23:18",
+      "OperationName": null,
+      "OperationId": null,
+      "EventType": "Metric",
+      "EventCause": "PlatformInitiated"
+    }
+  },
+  {
+    "ComponentName": "WebApplication",
+    "id": "Webapp-ECommerce-AppInsightsMetrics-requestsfailed",
+    "ModelType": "Platform Health",
+    "ModelSubtype": "requestsfailed",
+    "CurrentHealthStatus": "UnHealthy",
+    "PreviousHealthStatus": null,
+    "EventDetails": {
+      "EventDataId": null,
+      "alertLevel": "Sev2",
+      "CorrelationId": null,
+      "EventTimestamp": "13-07-2021 06:18:09",
+      "OperationName": null,
+      "OperationId": null,
+      "EventType": "Metric",
+      "EventCause": "PlatformInitiated"
+    }
+  },
+  {
+    "ComponentName": "WebApplication",
+    "id": "Webapp-ECommerce-AppInsightsMetrics-dependenciesfailed",
+    "ModelType": "Platform Health",
+    "ModelSubtype": "dependenciesfailed",
+    "CurrentHealthStatus": "Healthy",
+    "PreviousHealthStatus": null,
+    "EventDetails": {
+      "EventDataId": null,
+      "alertLevel": "Sev1",
+      "CorrelationId": null,
+      "EventTimestamp": "7/15/2021 12:40:13 PM",
+      "OperationName": null,
+      "OperationId": null,
+      "EventType": "Metric",
+      "EventCause": "PlatformInitiated"
+    }
+  },
+  {
+    "ComponentName": "WebApplication",
+    "id": "Webapp-ECommerce-AppInsightsMetrics-requestsduration",
+    "ModelType": "Platform Health",
+    "ModelSubtype": "requestsduration",
+    "CurrentHealthStatus": "UnHealthy",
+    "PreviousHealthStatus": null,
+    "EventDetails": {
+      "EventDataId": null,
+      "alertLevel": "Sev2",
+      "CorrelationId": null,
+      "EventTimestamp": "7/14/2021 1:56:14 PM",
+      "OperationName": null,
+      "OperationId": null,
+      "EventType": "Metric",
+      "EventCause": "PlatformInitiated"
+    }
+  },
+  {
+    "ComponentName": "applicationgateways",
+    "id": "appgw-ecomm-eastus-dev-PlatformMetrics-HealthyHostCount",
+    "ModelType": "Platform Health",
+    "ModelSubtype": "HealthyHostCount",
+    "CurrentHealthStatus": "UnHealthy",
+    "PreviousHealthStatus": null,
+    "EventDetails": {
+      "EventDataId": null,
+      "alertLevel": "Sev2",
+      "CorrelationId": null,
+      "EventTimestamp": "7/16/2021 5:17:40 PM",
+      "OperationName": null,
+      "OperationId": null,
+      "EventType": "Metric",
+      "EventCause": "PlatformInitiated"
+    }
+  },
+  {
+    "ComponentName": "applicationgateways",
+    "id": "appgw-ecomm-eastus-dev-PlatformMetrics-ApplicationGatewayTotalTime",
+    "ModelType": "Platform Health",
+    "ModelSubtype": "ApplicationGatewayTotalTime",
+    "CurrentHealthStatus": "Healthy",
+    "PreviousHealthStatus": null,
+    "EventDetails": {
+      "EventDataId": null,
+      "alertLevel": "Sev1",
+      "CorrelationId": null,
+      "EventTimestamp": "7/22/2021 5:06:10 PM",
+      "OperationName": null,
+      "OperationId": null,
+      "EventType": "Metric",
+      "EventCause": "PlatformInitiated"
+    }
+  },
+  {
+    "ComponentName": "applicationgateways",
+    "id": "appgw-ecomm-eastus-dev-PlatformMetrics-FailedRequests",
+    "ModelType": "Platform Health",
+    "ModelSubtype": "FailedRequests",
+    "CurrentHealthStatus": "Healthy",
+    "PreviousHealthStatus": null,
+    "EventDetails": {
+      "EventDataId": null,
+      "alertLevel": "Sev1",
+      "CorrelationId": null,
+      "EventTimestamp": "7/22/2021 4:05:49 PM",
+      "OperationName": null,
+      "OperationId": null,
+      "EventType": "Metric",
+      "EventCause": "PlatformInitiated"
+    }
+  }]
