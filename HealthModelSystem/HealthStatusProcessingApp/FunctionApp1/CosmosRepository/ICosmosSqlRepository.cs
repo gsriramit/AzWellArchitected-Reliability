@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace FunctionApp1.CosmosRepository
+namespace AzureHealthAlertProcessingSystem.CosmosRepository
 {
     public interface ICosmosSqlRepository
     {

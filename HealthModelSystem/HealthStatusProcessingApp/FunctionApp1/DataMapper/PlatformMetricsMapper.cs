@@ -1,10 +1,10 @@
-﻿using FunctionApp1.HealthAlertModels.PlatfromMetrics;
+﻿using AzureHealthAlertProcessingSystem.HealthAlertModels.PlatfromMetrics;
 using System.Collections.Generic;
 using System.Linq;
-using WebComponentHealthSystem.Common;
-using WebComponentHealthSystem.HealthDataModels;
+using AzureHealthAlertProcessingSystem.Common;
+using AzureHealthAlertProcessingSystem.HealthDataModels;
 
-namespace WebComponentHealthSystem.DataMapper
+namespace AzureHealthAlertProcessingSystem.DataMapper
 {
     internal class PlatformMetricsMapper
     {

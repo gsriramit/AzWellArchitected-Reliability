@@ -10,10 +10,10 @@ using Newtonsoft.Json;
 
 namespace AzureHealthAlertProcessingSystem
 {
-    public static class SignalrTestClientApp
+    public class SignalrTestClientApp
     {        
         [FunctionName("index")]
-        public static IActionResult Index([HttpTrigger(AuthorizationLevel.Anonymous)] HttpRequest req, ExecutionContext context)
+        public IActionResult Index([HttpTrigger(AuthorizationLevel.Anonymous)] HttpRequest req, ExecutionContext context)
         {
             var path = Path.Combine(context.FunctionAppDirectory, "SignalRTest", "HealthSystemDashboard.html");
             return new ContentResult

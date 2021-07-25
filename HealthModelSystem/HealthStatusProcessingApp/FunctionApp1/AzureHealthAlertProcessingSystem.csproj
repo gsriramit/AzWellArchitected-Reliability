@@ -1,8 +1,10 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <AzureFunctionsVersion>v3</AzureFunctionsVersion>
     <UserSecretsId>b403b9bf-460a-4b29-8c0e-0e17061a9022</UserSecretsId>
+    <RootNamespace>AzureHealthAlertProcessingSystem</RootNamespace>
+    <AssemblyName>AzureHealthAlertProcessingSystem</AssemblyName>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.ApplicationInsights.WorkerService" Version="2.15.0" />

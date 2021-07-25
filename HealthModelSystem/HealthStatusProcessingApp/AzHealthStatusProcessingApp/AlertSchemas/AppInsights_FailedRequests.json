@@ -1,0 +1,46 @@
+{
+  "schemaId": "azureMonitorCommonAlertSchema",
+  "data": {
+    "essentials": {
+      "alertId": "/subscriptions/d0075991-fdb6-4a2e-9d53-05fd3800cb79/providers/Microsoft.AlertsManagement/alerts/56864b04-9060-4068-bf7a-fe6b6306f958",
+      "alertRule": "AppIns_failedcount",
+      "severity": "Sev2",
+      "signalType": "Metric",
+      "monitorCondition": "Fired",
+      "monitoringService": "Platform",
+      "alertTargetIDs": [ "/subscriptions/d0075991-fdb6-4a2e-9d53-05fd3800cb79/resourcegroups/rg-wa-ecommerceapp-dev01/providers/microsoft.insights/components/appinsights-web-eastus-dev01" ],
+      "configurationItems": [ "appinsights-web-eastus-dev01" ],
+      "originAlertId": "d0075991-fdb6-4a2e-9d53-05fd3800cb79_RG-WA-ECommerceApp-Dev01_microsoft.insights_metricAlerts_AppIns_failedcount_-71745050",
+      "firedDateTime": "2021-07-13T06:18:09.6703545Z",
+      "description": "",
+      "essentialsVersion": "1.0",
+      "alertContextVersion": "1.0"
+    },
+    "alertContext": {
+      "properties": null,
+      "conditionType": "SingleResourceMultipleMetricCriteria",
+      "condition": {
+        "windowSize": "PT5M",
+        "allOf": [
+          {
+            "metricName": "requests/failed",
+            "metricNamespace": "microsoft.insights/components",
+            "operator": "GreaterThan",
+            "threshold": "75",
+            "timeAggregation": "Count",
+            "dimensions": [
+              {
+                "name": "request/resultCode",
+                "value": "503"
+              }
+            ],
+            "metricValue": 120.0,
+            "webTestName": null
+          }
+        ],
+        "windowStartTime": "2021-07-13T06:10:02.764Z",
+        "windowEndTime": "2021-07-13T06:15:02.764Z"
+      }
+    }
+  }
+}

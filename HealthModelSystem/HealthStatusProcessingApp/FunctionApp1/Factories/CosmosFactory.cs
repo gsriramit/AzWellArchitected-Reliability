@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace FunctionApp1.Factories
+namespace AzureHealthAlertProcessingSystem.Factories
 {
     /// <summary>
     /// This implementation creates a singleton object to be shared among the different functions in this app

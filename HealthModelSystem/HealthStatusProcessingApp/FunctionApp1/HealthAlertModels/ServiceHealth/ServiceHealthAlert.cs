@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace FunctionApp1.HealthAlertModels.ServiceHealth
+namespace AzureHealthAlertProcessingSystem.HealthAlertModels.ServiceHealth
 {
     public class ServiceHealthAlert
     {

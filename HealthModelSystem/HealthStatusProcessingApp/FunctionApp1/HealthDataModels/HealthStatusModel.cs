@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace WebComponentHealthSystem.HealthDataModels
+namespace AzureHealthAlertProcessingSystem.HealthDataModels
 {
     public class HealthStatusModel
     {

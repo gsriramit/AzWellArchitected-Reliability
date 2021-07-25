@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace FunctionApp1.HealthAlertModels.PlatfromMetrics
+namespace AzureHealthAlertProcessingSystem.HealthAlertModels.PlatfromMetrics
 {
     public class PlatformMetricAlerts
     {

@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using WebComponentHealthSystem.DashboardDataModel;
-using WebComponentHealthSystem.HealthDataModels;
+using AzureHealthAlertProcessingSystem.DashboardDataModel;
+using AzureHealthAlertProcessingSystem.HealthDataModels;
 using System.Linq;
-using WebComponentHealthSystem.Common;
+using AzureHealthAlertProcessingSystem.Common;
 using System.Globalization;
 
-namespace WebComponentHealthSystem.DataMapper
+namespace AzureHealthAlertProcessingSystem.DataMapper
 {
     internal class DashboardDataMapper
     {

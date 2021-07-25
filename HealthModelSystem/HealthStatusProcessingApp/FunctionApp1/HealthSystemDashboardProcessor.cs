@@ -7,13 +7,13 @@ using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
-using FunctionApp1.CosmosRepository;
-using WebComponentHealthSystem.DashboardDataModel;
+using AzureHealthAlertProcessingSystem.CosmosRepository;
+using AzureHealthAlertProcessingSystem.DashboardDataModel;
 using System.Collections.Generic;
-using WebComponentHealthSystem.HealthDataModels;
-using WebComponentHealthSystem.DataMapper;
+using AzureHealthAlertProcessingSystem.HealthDataModels;
+using AzureHealthAlertProcessingSystem.DataMapper;
 
-namespace WebComponentHealthSystem
+namespace AzureHealthAlertProcessingSystem
 {
     public class HealthSystemDashboardProcessor
     {

@@ -10,18 +10,18 @@ using Microsoft.Azure.WebJobs.Extensions.SignalRService;
 using Microsoft.Azure.WebJobs.Host;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
-using WebComponentHealthSystem.DashboardDataModel;
-using WebComponentHealthSystem.DataMapper;
-using WebComponentHealthSystem.HealthDataModels;
+using AzureHealthAlertProcessingSystem.DashboardDataModel;
+using AzureHealthAlertProcessingSystem.DataMapper;
+using AzureHealthAlertProcessingSystem.HealthDataModels;
 
 
-namespace AzureRealtimeUpdatesProcessingSystem
+namespace AzureHealthAlertProcessingSystem
 {
-    public static class HealthChangeFeedProcessor
+    public class HealthChangeFeedProcessor
     {
 
         [FunctionName("negotiate")]
-        public static SignalRConnectionInfo Negotiate(
+        public SignalRConnectionInfo Negotiate(
             [HttpTrigger(AuthorizationLevel.Anonymous)] HttpRequest req,
             [SignalRConnectionInfo(HubName = "systemhealthmodelhub")] SignalRConnectionInfo connectionInfo)
         {
@@ -30,7 +30,7 @@ namespace AzureRealtimeUpdatesProcessingSystem
 
 
         [FunctionName("ProcessHealthChangeFeed")]
-        public static async Task Run([CosmosDBTrigger(
+        public async Task Run([CosmosDBTrigger(
             databaseName: "HealthModelDatabase",
             collectionName: "CloudComponentsHealth",
             ConnectionStringSetting = "CosmosConnectionString",

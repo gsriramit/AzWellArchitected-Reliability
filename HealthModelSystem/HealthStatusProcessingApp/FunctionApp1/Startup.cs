@@ -1,16 +1,17 @@
-﻿using FunctionApp1.CosmosRepository;
-using FunctionApp1.Factories;
+﻿using AzureHealthAlertProcessingSystem.CosmosRepository;
+using AzureHealthAlertProcessingSystem.Factories;
 using Microsoft.Azure.Cosmos;
 using Microsoft.Azure.Functions.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection;
-using WebComponentHealthSystem.Common;
+using AzureHealthAlertProcessingSystem.Common;
+using AzureHealthAlertProcessingSystem;
 
-[assembly: FunctionsStartup(typeof(WebComponentHealthSystem.Startup))]
-namespace WebComponentHealthSystem
+[assembly: FunctionsStartup(typeof(Startup))]
+namespace AzureHealthAlertProcessingSystem
 {
     public class Startup : FunctionsStartup
     {
-        public override void Configure(IFunctionsHostBuilder builder)
+        public override void Configure(IFunctionsHostBuilder builder)       
         {
             builder.Services.AddSingleton<ICosmosSqlRepository>((s) =>
             {

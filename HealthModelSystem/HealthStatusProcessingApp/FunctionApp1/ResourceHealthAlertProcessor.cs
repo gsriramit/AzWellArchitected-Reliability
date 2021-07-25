@@ -6,11 +6,11 @@ using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
-using FunctionApp1.HealthAlertModels.ResourceHealth;
-using FunctionApp1.CosmosRepository;
-using WebComponentHealthSystem.HealthDataModels;
-using WebComponentHealthSystem.DataMapper;
-namespace FunctionApp1
+using AzureHealthAlertProcessingSystem.HealthAlertModels.ResourceHealth;
+using AzureHealthAlertProcessingSystem.CosmosRepository;
+using AzureHealthAlertProcessingSystem.HealthDataModels;
+using AzureHealthAlertProcessingSystem.DataMapper;
+namespace AzureHealthAlertProcessingSystem
 {
     public class ResourceHealthAlertProcessor
     {        

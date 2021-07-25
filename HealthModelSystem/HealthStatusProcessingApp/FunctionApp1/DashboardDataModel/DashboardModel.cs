@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace WebComponentHealthSystem.DashboardDataModel
+namespace AzureHealthAlertProcessingSystem.DashboardDataModel
 {
     internal class DashboardModel
     {

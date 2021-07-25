@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace WebComponentHealthSystem.Common
+namespace AzureHealthAlertProcessingSystem.Common
 {
     public static class GlobalConstants
     {
