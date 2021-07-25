@@ -40,7 +40,7 @@ const Header = () => {
                
 
             </NavMenu>
-            <UserImg src="https://avatars.githubusercontent.com/u/7909946?v=4" alt=""/>
+            <UserImg src="/user-profile.png" alt=""/>
         </Nav>
     )
 }
@@ -50,7 +50,7 @@ export default Header
 
 const Nav = styled.nav`
     height: 70px;
-    background: #20232A;
+    background: #3e4658;
     display: flex;
     align-items: center;
     padding: 0 36px 0px 0px;
