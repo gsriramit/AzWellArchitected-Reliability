@@ -35,3 +35,12 @@ export const healthDataFromServer = () => async (dispatch) => {
         dispatch(fetchHealthDataFailure(error.message));
     })
 }
+
+export const updateSignalRUpdates = (signalRUpdate) => {
+    return (dispatch) => {
+        dispatch({
+            type : 'SIGNALR_NOTIFICATION',
+            payload: signalRUpdate
+        })
+    }
+}

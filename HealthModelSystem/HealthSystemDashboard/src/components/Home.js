@@ -9,10 +9,14 @@ import { HubConnection, HubConnectionBuilder } from "@microsoft/signalr";
 
 const Home = () => {
     const [connection, setConnection] = useState(null);
+    const dashboardData = useSelector(state => state.healthDataReducer);
+    console.log(dashboardData);
 
+    const dispatch = useDispatch();
+    const {healthDataFromServer, updateSignalRUpdates} = bindActionCreators(actionCreators, dispatch);
     useEffect(() => {
         const connect = new HubConnectionBuilder()
-          .withUrl("http://philssignalrdemo.azurewebsites.net/signalr")
+          .withUrl("https://azhealthmodelsystem-dev01.azurewebsites.net/api")
           .withAutomaticReconnect()
           .build();
     
@@ -24,30 +28,17 @@ const Home = () => {
           connection
             .start()
             .then(() => {
-              connection.on("ReceiveMessage", (message) => {
-                console.log({
+              connection.on("healthstatuschange", (message) => {
+                console.log(JSON.stringify({
                   message: "New Notification",
                   description: message,
-                });
+                }));
+                updateSignalRUpdates(message);
               });
             })
             .catch((error) => console.log(error));
         }
       }, [connection]);
-
-    //   const sendMessage = async () => {
-    //     if (connection) await connection.send("SendMessage", inputText);
-    //     setInputText("");
-    //   };
-
-
-
-    const dashboardData = useSelector(state => state.healthDataReducer);
-    console.log(dashboardData);
-
-    const dispatch = useDispatch();
-    const {healthDataFromServer} = bindActionCreators(actionCreators, dispatch);
-    
 
     useEffect(() => {
         healthDataFromServer();

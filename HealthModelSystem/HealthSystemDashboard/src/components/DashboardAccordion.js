@@ -2,6 +2,7 @@ import { Accordion, Badge, Table } from "react-bootstrap";
 import React from "react";
 import TimeAgo from "javascript-time-ago";
 import en from "javascript-time-ago/locale/en";
+import styled from 'styled-components';
 
 
 TimeAgo.addDefaultLocale(en);
@@ -26,9 +27,10 @@ const DashboardAccordion = ({dashboardData}) => {
             >
               <div>{eachParentCategory.componentName} </div>
               <div className="parentHealthStatusContainer">
-                <Badge bg="success">
+                {/* <Badge bg="success">
                   {eachParentCategory.overallHealthStatus}
-                </Badge>{" "}
+                </Badge>{" "} */}
+                <UserImg src={eachParentCategory.overallHealthStatus == 'Healthy' ? "https://icons.iconarchive.com/icons/custom-icon-design/flatastic-10/256/Trafficlight-green-icon.png" : "https://icons.iconarchive.com/icons/custom-icon-design/flatastic-10/256/Trafficlight-red-icon.png" } alt=""/> {" "}
                 - {" "}
                 <Badge bg="secondary">
                   Last status check on{" "}
@@ -70,7 +72,8 @@ const DashboardAccordion = ({dashboardData}) => {
       return (
         <tr key={index}>
             <td>{eachCompStatus.subcomponentName}</td>
-            <td>{eachCompStatus.currentStatus}</td>
+            {/* <td>{eachCompStatus.currentStatus}</td> */}
+            <td><UserImg src={eachCompStatus.currentStatus == 'Healthy' ? "https://icons.iconarchive.com/icons/custom-icon-design/flatastic-10/256/Trafficlight-green-icon.png" : "https://icons.iconarchive.com/icons/custom-icon-design/flatastic-10/256/Trafficlight-red-icon.png" } alt=""/></td> 
             <td>{eachCompStatus.additionalInfo}</td>
             {/* <td>{timeAgo.format(Date.parse(eachCompStatus.LastCheckTime))}</td> */}
             <td>{timeAgo.format(Date.parse(eachCompStatus.lastCheckTime))}</td> 
@@ -108,3 +111,10 @@ const DashboardAccordion = ({dashboardData}) => {
 };
 
 export default DashboardAccordion;
+
+const UserImg = styled.img`
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    cursor: pointer;    
+`;
