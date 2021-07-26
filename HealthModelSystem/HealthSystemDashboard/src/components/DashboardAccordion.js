@@ -30,7 +30,7 @@ const DashboardAccordion = ({dashboardData}) => {
                 {/* <Badge bg="success">
                   {eachParentCategory.overallHealthStatus}
                 </Badge>{" "} */}
-                <UserImg src={eachParentCategory.overallHealthStatus == 'Healthy' ? "https://icons.iconarchive.com/icons/custom-icon-design/flatastic-10/256/Trafficlight-green-icon.png" : "https://icons.iconarchive.com/icons/custom-icon-design/flatastic-10/256/Trafficlight-red-icon.png" } alt=""/> {" "}
+                <UserImg src={(eachParentCategory.overallHealthStatus === 'Healthy' || eachParentCategory.overallHealthStatus ===  'Available' ) ? "https://icons.iconarchive.com/icons/custom-icon-design/flatastic-10/256/Trafficlight-green-icon.png" : "https://icons.iconarchive.com/icons/custom-icon-design/flatastic-10/256/Trafficlight-red-icon.png" } alt=""/> {" "}
                 - {" "}
                 <Badge bg="secondary">
                   Last status check on{" "}
@@ -73,7 +73,7 @@ const DashboardAccordion = ({dashboardData}) => {
         <tr key={index}>
             <td>{eachCompStatus.subcomponentName}</td>
             {/* <td>{eachCompStatus.currentStatus}</td> */}
-            <td><UserImg src={eachCompStatus.currentStatus == 'Healthy' ? "https://icons.iconarchive.com/icons/custom-icon-design/flatastic-10/256/Trafficlight-green-icon.png" : "https://icons.iconarchive.com/icons/custom-icon-design/flatastic-10/256/Trafficlight-red-icon.png" } alt=""/></td> 
+            <td><UserImg src={(eachCompStatus.currentStatus === 'Healthy' || eachCompStatus.currentStatus ===  'Available' ) ? "https://icons.iconarchive.com/icons/custom-icon-design/flatastic-10/256/Trafficlight-green-icon.png" : "https://icons.iconarchive.com/icons/custom-icon-design/flatastic-10/256/Trafficlight-red-icon.png" } alt=""/></td> 
             <td>{eachCompStatus.additionalInfo}</td>
             {/* <td>{timeAgo.format(Date.parse(eachCompStatus.LastCheckTime))}</td> */}
             <td>{timeAgo.format(Date.parse(eachCompStatus.lastCheckTime))}</td> 

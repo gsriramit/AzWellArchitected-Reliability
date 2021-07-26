@@ -30,17 +30,17 @@ const updateSignalRUpdateInstate = (healthInfo, signalRUpdate) => {
                     healthInfo[j].overallHealthStatus = signalRUpdate[i].OverallHealthStatus;
 
 
-                    for(let m = 0; m < signalRUpdate[i].SubComponents; m ++){
-                        for(let n = 0; n < healthInfo[j].subComponents; n ++){
+                    for(let m = 0; m < signalRUpdate[i].SubComponents.length; m ++){
+                        for(let n = 0; n < healthInfo[j].subComponents.length; n ++){
 
                             if(signalRUpdate[i].SubComponents[m].SubcomponentCategory === healthInfo[j].subComponents[n].subcomponentCategory
-                                && signalRUpdate[i].SubComponents[m].SubComponentStatus > 0){
+                                && signalRUpdate[i].SubComponents[m].SubComponentStatus.length > 0){
 
                                     for(let a = 0; a < signalRUpdate[i].SubComponents[m].SubComponentStatus.length; a++){
                                         for(let b = 0; b < healthInfo[j].subComponents[n].subComponentStatus.length; b++){
 
                                             if(healthInfo[j].subComponents[n].subComponentStatus[b].subcomponentName === signalRUpdate[i].SubComponents[m].SubComponentStatus[a].SubcomponentName){
-                                                healthInfo[j].subComponents[n].subComponentStatus[b].surrentStatus = signalRUpdate[i].SubComponents[m].SubComponentStatus[a].CurrentStatus;
+                                                healthInfo[j].subComponents[n].subComponentStatus[b].currentStatus = signalRUpdate[i].SubComponents[m].SubComponentStatus[a].CurrentStatus;
                                                 healthInfo[j].subComponents[n].subComponentStatus[b].additionalInfo = signalRUpdate[i].SubComponents[m].SubComponentStatus[a].AdditionalInfo;
                                                 healthInfo[j].subComponents[n].subComponentStatus[b].subcomponentCategory = signalRUpdate[i].SubComponents[m].SubComponentStatus[a].SubcomponentCategory;
                                                 healthInfo[j].subComponents[n].subComponentStatus[b].lastCheckTime = signalRUpdate[i].SubComponents[m].SubComponentStatus[a].LastCheckTime;
