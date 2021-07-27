@@ -55,12 +55,22 @@ const updateSignalRUpdateInstate = (healthInfo, signalRUpdate) => {
                         }
                     }
 
+                    //Check over all health status
+                    let overAllHealthStatusFlag = true;
+                    healthInfo[j].subComponents.forEach((eachSubcomponent) => {
+                        eachSubcomponent.subComponentStatus.forEach((eachStatus) => {
+                            if(eachStatus.currentStatus === 'UnHealthy' && eachStatus.currentStatus !== 'UnAvailable'){
+                                overAllHealthStatusFlag = false;
+                            }
+                        });
+                    });
+                    healthInfo[j].overallHealthStatus = overAllHealthStatusFlag;
                 }
             }
         }
 
         return healthInfo;
     }
-}
+};
 
 
