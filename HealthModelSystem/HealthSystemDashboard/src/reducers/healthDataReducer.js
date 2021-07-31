@@ -18,16 +18,16 @@ export const healthDataReducer = (state = initialState, action) => {
     }
 }
 
-
 const updateSignalRUpdateInstate = (healthInfo, signalRUpdate) => {
     if(healthInfo === [])
         return [];
     else if(healthInfo.length > 0 && signalRUpdate.length > 0) {
         for(let i =0 ; i < signalRUpdate.length; i ++){
             for (let j = 0; j < healthInfo.length; j++){
+                let shouldUpdateOverallHealthStatus = false;
+
                 if(healthInfo[j].componentName === signalRUpdate[i].ComponentName){
                     healthInfo[j].lastCheckTime = signalRUpdate[i].LastCheckTime;
-                    healthInfo[j].overallHealthStatus = signalRUpdate[i].OverallHealthStatus;
 
 
                     for(let m = 0; m < signalRUpdate[i].SubComponents.length; m ++){
@@ -35,7 +35,7 @@ const updateSignalRUpdateInstate = (healthInfo, signalRUpdate) => {
 
                             if(signalRUpdate[i].SubComponents[m].SubcomponentCategory === healthInfo[j].subComponents[n].subcomponentCategory
                                 && signalRUpdate[i].SubComponents[m].SubComponentStatus.length > 0){
-
+                                    shouldUpdateOverallHealthStatus = true;
                                     for(let a = 0; a < signalRUpdate[i].SubComponents[m].SubComponentStatus.length; a++){
                                         for(let b = 0; b < healthInfo[j].subComponents[n].subComponentStatus.length; b++){
 
@@ -55,16 +55,25 @@ const updateSignalRUpdateInstate = (healthInfo, signalRUpdate) => {
                         }
                     }
 
-                    //Check over all health status
-                    let overAllHealthStatusFlag = true;
-                    healthInfo[j].subComponents.forEach((eachSubcomponent) => {
-                        eachSubcomponent.subComponentStatus.forEach((eachStatus) => {
-                            if(eachStatus.currentStatus === 'UnHealthy' && eachStatus.currentStatus !== 'UnAvailable'){
-                                overAllHealthStatusFlag = false;
+                    if(shouldUpdateOverallHealthStatus){
+                        //Check over all health status
+                        let overAllHealthStatusFlag = true;
+                        for(let subComp = 0; subComp < healthInfo[j].subComponents.length; subComp++){
+                            for(let subCompStatus = 0; subCompStatus < healthInfo[j].subComponents[subComp].subComponentStatus.length; subCompStatus++){
+                                if(healthInfo[j].subComponents[subComp].subComponentStatus[subCompStatus].currentStatus === 'UnHealthy'
+                                || healthInfo[j].subComponents[subComp].subComponentStatus[subCompStatus].currentStatus === 'UnAvailable'){
+                                    overAllHealthStatusFlag = false;
+                                    break;
+                                }
                             }
-                        });
-                    });
-                    healthInfo[j].overallHealthStatus = overAllHealthStatusFlag;
+                        }
+                        healthInfo[j].overallHealthStatus = overAllHealthStatusFlag;
+                        shouldUpdateOverallHealthStatus = false;
+                   
+                    healthInfo[j].overallHealthStatus = overAllHealthStatusFlag ? "Healthy" : "UnHealthy";
+                    shouldUpdateOverallHealthStatus = false;
+                    }
+ 
                 }
             }
         }

@@ -27,7 +27,7 @@ export const fetchHealthDataFailure = (errorMessage) => {
 }
 
 export const healthDataFromServer = () => async (dispatch) => {
-    await axios.get("https://azhealthmodelsystem-dev01.azurewebsites.net/api/HealthSystemDashboardProcessor?code=gdxBc4I3bIRs5Ck07Pqoqlgj5nQrV9RXAhr9QHBDTb0PoLcTRjfzoA==")
+    await axios.get("https://azhealthmodelsystem-dev02.azurewebsites.net/api/HealthSystemDashboardProcessor?code=Y63OIaV6rA6s3cmec4FkcUVsD/EoF5vUHpNWtsaiLw5jlG71w13nHw==")
     .then(response => {
         dispatch(fetchHealthDataSuccess(response.data));
     })
