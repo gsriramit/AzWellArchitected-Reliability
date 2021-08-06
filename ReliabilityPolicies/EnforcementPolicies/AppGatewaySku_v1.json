@@ -1,0 +1,51 @@
+{
+    "mode": "Indexed",
+    "policyRule": {
+      "if": {
+        "allOf": [
+          {
+            "field": "type",
+            "equals": "Microsoft.Network/applicationGateways"
+          },
+          {
+            "field": "Microsoft.Network/applicationGateways/sku",
+            "exists": "false"
+          },
+          {
+            "field":"Microsoft.Network/applicationGateways/sku.tier",
+            "notIn":"[parameters('allowedgatewayskus')]"
+          }
+        ]
+      },
+      "then": {
+        "effect": "[parameters('effect')]"
+      }
+    },
+    "parameters": {
+      "effect": {
+        "type": "String",
+        "metadata": {
+          "displayName": "Effect",
+          "description": "Enable or disable the execution of the policy"
+        },
+        "allowedValues": [
+          "Audit",
+          "Deny",
+          "Disabled"
+        ],
+        "defaultValue": "Deny"
+      },
+      "allowedgatewayskus":{
+         "type": "Array",
+          "metadata": {
+              "description": "The list of allowed SKU Types for application gateway resources.",
+              "displayName": "Allowed App-Gw SKU"
+          },
+          "defaultValue": [ "Standard_v2" ],
+          "allowedValues": [
+              "Standard_v2",
+              "WAF_v2"
+          ]
+      }
+    }
+  }

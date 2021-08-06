@@ -1,0 +1,47 @@
+{
+  "mode": "Indexed",
+  "policyRule": {
+    "if": {
+      "allOf": [
+        {
+          "field": "type",
+          "equals": "Microsoft.Network/applicationGateways"
+        },
+        {
+          "field": "zones",
+          "exists": "false"
+        },
+        {
+          "field": "zones",
+          "equals": "[parameters('allowedzoneids')]"
+        }
+      ]
+    },
+    "then": {
+      "effect": "[parameters('effect')]"
+    }
+  },
+  "parameters": {
+    "effect": {
+      "type": "String",
+      "metadata": {
+        "displayName": "Effect",
+        "description": "Enable or disable the execution of the policy"
+      },
+      "allowedValues": [
+        "Audit",
+        "Deny",
+        "Disabled"
+      ],
+      "defaultValue": "Deny"
+    },
+    "allowedzoneids": {
+      "type": "Array",
+      "metadata": {
+        "description": "Allowed zone ids for the app gateway instances",
+        "displayName": "Allowed App-Gw Zone Ids"
+      },
+      "defaultValue": ["1","2","3"]
+    }
+  }
+}

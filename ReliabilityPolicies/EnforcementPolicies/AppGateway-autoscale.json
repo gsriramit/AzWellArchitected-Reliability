@@ -1,0 +1,49 @@
+{
+    "mode": "Indexed",
+    "policyRule": {
+      "if": {
+        "allOf": [
+          {
+            "field": "type",
+            "equals": "Microsoft.Network/applicationGateways"
+          },
+          {
+          "anyOf": [ {
+            "field": "Microsoft.Network/applicationGateways/autoscaleConfiguration",
+            "exists": "false"
+          },
+          {
+            "field":"Microsoft.Network/applicationGateways/autoscaleConfiguration.minCapacity",
+            "notEquals":"[parameters('allowedgatewaymincapacity')]"
+          }]
+          }
+        ]
+      },
+      "then": {
+        "effect": "[parameters('effect')]"
+      }
+    },
+    "parameters": {
+      "effect": {
+        "type": "String",
+        "metadata": {
+          "displayName": "Effect",
+          "description": "Enable or disable the execution of the policy"
+        },
+        "allowedValues": [
+          "Audit",
+          "Deny",
+          "Disabled"
+        ],
+        "defaultValue": "Deny"
+      },
+      "allowedgatewaymincapacity":{
+         "type": "Integer",
+          "metadata": {
+              "description": "Allowed minimum instances of the app gateway.",
+              "displayName": "Allowed App-Gw Min Instances"
+          },
+          "defaultValue": 2
+      }
+    }
+  }

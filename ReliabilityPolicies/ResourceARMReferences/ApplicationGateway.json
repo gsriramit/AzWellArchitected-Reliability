@@ -1,0 +1,452 @@
+{
+    "name": "string",
+    "type": "Microsoft.Network/applicationGateways",
+    "apiVersion": "2020-07-01",
+    "location": "string",
+    "tags": {},
+    "properties": {
+      "sku": {
+        "name": "string",
+        "tier": "string",
+        "capacity": "integer"
+      },
+      "sslPolicy": {
+        "disabledSslProtocols": [
+          "string"
+        ],
+        "policyType": "string",
+        "policyName": "string",
+        "cipherSuites": [
+          "string"
+        ],
+        "minProtocolVersion": "string"
+      },
+      "gatewayIPConfigurations": [
+        {
+          "id": "string",
+          "properties": {
+            "subnet": {
+              "id": "string"
+            }
+          },
+          "name": "string"
+        }
+      ],
+      "authenticationCertificates": [
+        {
+          "id": "string",
+          "properties": {
+            "data": "string"
+          },
+          "name": "string"
+        }
+      ],
+      "trustedRootCertificates": [
+        {
+          "id": "string",
+          "properties": {
+            "data": "string",
+            "keyVaultSecretId": "string"
+          },
+          "name": "string"
+        }
+      ],
+      "trustedClientCertificates": [
+        {
+          "id": "string",
+          "properties": {
+            "data": "string"
+          },
+          "name": "string"
+        }
+      ],
+      "sslCertificates": [
+        {
+          "id": "string",
+          "properties": {
+            "data": "string",
+            "password": "string",
+            "keyVaultSecretId": "string"
+          },
+          "name": "string"
+        }
+      ],
+      "frontendIPConfigurations": [
+        {
+          "id": "string",
+          "properties": {
+            "privateIPAddress": "string",
+            "privateIPAllocationMethod": "string",
+            "subnet": {
+              "id": "string"
+            },
+            "publicIPAddress": {
+              "id": "string"
+            },
+            "privateLinkConfiguration": {
+              "id": "string"
+            }
+          },
+          "name": "string"
+        }
+      ],
+      "frontendPorts": [
+        {
+          "id": "string",
+          "properties": {
+            "port": "integer"
+          },
+          "name": "string"
+        }
+      ],
+      "probes": [
+        {
+          "id": "string",
+          "properties": {
+            "protocol": "string",
+            "host": "string",
+            "path": "string",
+            "interval": "integer",
+            "timeout": "integer",
+            "unhealthyThreshold": "integer",
+            "pickHostNameFromBackendHttpSettings": "boolean",
+            "minServers": "integer",
+            "match": {
+              "body": "string",
+              "statusCodes": [
+                "string"
+              ]
+            },
+            "port": "integer"
+          },
+          "name": "string"
+        }
+      ],
+      "backendAddressPools": [
+        {
+          "id": "string",
+          "properties": {
+            "backendAddresses": [
+              {
+                "fqdn": "string",
+                "ipAddress": "string"
+              }
+            ]
+          },
+          "name": "string"
+        }
+      ],
+      "backendHttpSettingsCollection": [
+        {
+          "id": "string",
+          "properties": {
+            "port": "integer",
+            "protocol": "string",
+            "cookieBasedAffinity": "string",
+            "requestTimeout": "integer",
+            "probe": {
+              "id": "string"
+            },
+            "authenticationCertificates": [
+              {
+                "id": "string"
+              }
+            ],
+            "trustedRootCertificates": [
+              {
+                "id": "string"
+              }
+            ],
+            "connectionDraining": {
+              "enabled": "boolean",
+              "drainTimeoutInSec": "integer"
+            },
+            "hostName": "string",
+            "pickHostNameFromBackendAddress": "boolean",
+            "affinityCookieName": "string",
+            "probeEnabled": "boolean",
+            "path": "string"
+          },
+          "name": "string"
+        }
+      ],
+      "httpListeners": [
+        {
+          "id": "string",
+          "properties": {
+            "frontendIPConfiguration": {
+              "id": "string"
+            },
+            "frontendPort": {
+              "id": "string"
+            },
+            "protocol": "string",
+            "hostName": "string",
+            "sslCertificate": {
+              "id": "string"
+            },
+            "sslProfile": {
+              "id": "string"
+            },
+            "requireServerNameIndication": "boolean",
+            "customErrorConfigurations": [
+              {
+                "statusCode": "string",
+                "customErrorPageUrl": "string"
+              }
+            ],
+            "firewallPolicy": {
+              "id": "string"
+            },
+            "hostNames": [
+              "string"
+            ]
+          },
+          "name": "string"
+        }
+      ],
+      "sslProfiles": [
+        {
+          "id": "string",
+          "properties": {
+            "trustedClientCertificates": [
+              {
+                "id": "string"
+              }
+            ],
+            "sslPolicy": {
+              "disabledSslProtocols": [
+                "string"
+              ],
+              "policyType": "string",
+              "policyName": "string",
+              "cipherSuites": [
+                "string"
+              ],
+              "minProtocolVersion": "string"
+            },
+            "clientAuthConfiguration": {
+              "verifyClientCertIssuerDN": "boolean"
+            }
+          },
+          "name": "string"
+        }
+      ],
+      "urlPathMaps": [
+        {
+          "id": "string",
+          "properties": {
+            "defaultBackendAddressPool": {
+              "id": "string"
+            },
+            "defaultBackendHttpSettings": {
+              "id": "string"
+            },
+            "defaultRewriteRuleSet": {
+              "id": "string"
+            },
+            "defaultRedirectConfiguration": {
+              "id": "string"
+            },
+            "pathRules": [
+              {
+                "id": "string",
+                "properties": {
+                  "paths": [
+                    "string"
+                  ],
+                  "backendAddressPool": {
+                    "id": "string"
+                  },
+                  "backendHttpSettings": {
+                    "id": "string"
+                  },
+                  "redirectConfiguration": {
+                    "id": "string"
+                  },
+                  "rewriteRuleSet": {
+                    "id": "string"
+                  },
+                  "firewallPolicy": {
+                    "id": "string"
+                  }
+                },
+                "name": "string"
+              }
+            ]
+          },
+          "name": "string"
+        }
+      ],
+      "requestRoutingRules": [
+        {
+          "id": "string",
+          "properties": {
+            "ruleType": "string",
+            "priority": "integer",
+            "backendAddressPool": {
+              "id": "string"
+            },
+            "backendHttpSettings": {
+              "id": "string"
+            },
+            "httpListener": {
+              "id": "string"
+            },
+            "urlPathMap": {
+              "id": "string"
+            },
+            "rewriteRuleSet": {
+              "id": "string"
+            },
+            "redirectConfiguration": {
+              "id": "string"
+            }
+          },
+          "name": "string"
+        }
+      ],
+      "rewriteRuleSets": [
+        {
+          "id": "string",
+          "properties": {
+            "rewriteRules": [
+              {
+                "name": "string",
+                "ruleSequence": "integer",
+                "conditions": [
+                  {
+                    "variable": "string",
+                    "pattern": "string",
+                    "ignoreCase": "boolean",
+                    "negate": "boolean"
+                  }
+                ],
+                "actionSet": {
+                  "requestHeaderConfigurations": [
+                    {
+                      "headerName": "string",
+                      "headerValue": "string"
+                    }
+                  ],
+                  "responseHeaderConfigurations": [
+                    {
+                      "headerName": "string",
+                      "headerValue": "string"
+                    }
+                  ],
+                  "urlConfiguration": {
+                    "modifiedPath": "string",
+                    "modifiedQueryString": "string",
+                    "reroute": "boolean"
+                  }
+                }
+              }
+            ]
+          },
+          "name": "string"
+        }
+      ],
+      "redirectConfigurations": [
+        {
+          "id": "string",
+          "properties": {
+            "redirectType": "string",
+            "targetListener": {
+              "id": "string"
+            },
+            "targetUrl": "string",
+            "includePath": "boolean",
+            "includeQueryString": "boolean",
+            "requestRoutingRules": [
+              {
+                "id": "string"
+              }
+            ],
+            "urlPathMaps": [
+              {
+                "id": "string"
+              }
+            ],
+            "pathRules": [
+              {
+                "id": "string"
+              }
+            ]
+          },
+          "name": "string"
+        }
+      ],
+      "webApplicationFirewallConfiguration": {
+        "enabled": "boolean",
+        "firewallMode": "string",
+        "ruleSetType": "string",
+        "ruleSetVersion": "string",
+        "disabledRuleGroups": [
+          {
+            "ruleGroupName": "string",
+            "rules": [
+              "integer"
+            ]
+          }
+        ],
+        "requestBodyCheck": "boolean",
+        "maxRequestBodySize": "integer",
+        "maxRequestBodySizeInKb": "integer",
+        "fileUploadLimitInMb": "integer",
+        "exclusions": [
+          {
+            "matchVariable": "string",
+            "selectorMatchOperator": "string",
+            "selector": "string"
+          }
+        ]
+      },
+      "firewallPolicy": {
+        "id": "string"
+      },
+      "enableHttp2": "boolean",
+      "enableFips": "boolean",
+      "autoscaleConfiguration": {
+        "minCapacity": "integer",
+        "maxCapacity": "integer"
+      },
+      "privateLinkConfigurations": [
+        {
+          "id": "string",
+          "properties": {
+            "ipConfigurations": [
+              {
+                "id": "string",
+                "properties": {
+                  "privateIPAddress": "string",
+                  "privateIPAllocationMethod": "string",
+                  "subnet": {
+                    "id": "string"
+                  },
+                  "primary": "boolean"
+                },
+                "name": "string"
+              }
+            ]
+          },
+          "name": "string"
+        }
+      ],
+      "customErrorConfigurations": [
+        {
+          "statusCode": "string",
+          "customErrorPageUrl": "string"
+        }
+      ],
+      "forceFirewallPolicyAssociation": "boolean"
+    },
+    "zones": [
+      "string"
+    ],
+    "identity": {
+      "type": "string",
+      "userAssignedIdentities": {}
+    },
+    "resources": []
+  }
