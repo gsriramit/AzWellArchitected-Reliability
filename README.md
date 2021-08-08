@@ -1,5 +1,14 @@
 # About this Repo
-This repository contains artifacts that help in designing and implementing systems according to Azure Well-Architected Framework. 
+This repository contains artifacts that help in designing and implementing systems according to the Azure Well-Architected Framework. We would be using reference architectures from Azure's High Availability Reference Architectures collection, thereby serving as a "Learn building a highly reliable system yourself (DIY)"
+
+# Reference Architectures
+The system that we use for the discussion of a variety of topics in this repository will be a combination of the 2 architectures that are specified below. The first architecture shows a simple 2-Tier web application built using regional resiliency features. The second architecture can be considred an extension of the same system on to a secondary region with infrastructure & application redundancy. 
+
+**IaaS: Web application with relational database**  
+https://docs.microsoft.com/en-us/azure/architecture/high-availability/ref-arch-iaas-web-and-db
+
+**Multi-region N-tier application**  
+https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/n-tier/multi-region-sql-server
 
 # Sections
 
@@ -20,3 +29,10 @@ This repository contains artifacts that help in designing and implementing syste
    - System Performance Testing (Load)
    - [Chaos Experiments](ChaosExperiments)
 7. [Health Model System](HealthModelSystem)
+
+# Areas of extensibility
+1. Chaos engineering for scenarios that experiment regional failover 
+   - Frontend fails( backend does not)
+   - Backend fails (frontend does not but the health probe would fail)
+2. Traffic Manager being a SPOF
+   - Using an alternate global laod balancing solution (manual change of piublic DNS A records to point to the fallback load balancer)
