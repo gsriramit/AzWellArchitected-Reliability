@@ -30,9 +30,11 @@ https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/n-ti
    - [Chaos Experiments](ChaosExperiments)
 7. [Health Model System](HealthModelSystem)
 
-# Areas of extensibility
+# Areas of Extensibility
 1. Chaos engineering for scenarios that experiment regional failover 
    - Frontend fails( backend does not)
    - Backend fails (frontend does not but the health probe would fail)
 2. Traffic Manager being a SPOF
    - Using an alternate global laod balancing solution (manual change of piublic DNS A records to point to the fallback load balancer)
+3. Implementation of resiliency at the application level
+   - https://github.com/mspnp/samples/tree/master/Reliability/RetryPatternSample
