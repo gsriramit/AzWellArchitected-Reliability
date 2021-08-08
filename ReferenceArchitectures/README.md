@@ -1,6 +1,6 @@
 # Highly Available Multi-Region Web Application
 
-![Well-Archictected-Reliability - Reliability-Reference Architecture](https://user-images.githubusercontent.com/13979783/128623612-d233b16f-a8a5-45ff-b192-4c0d6d01582a.png)
+![Well-Archictected-Reliability - Reliability-Reference Architecture](https://user-images.githubusercontent.com/13979783/128624598-f75d633c-a2c8-40a5-b55f-609f128bd9db.png)
 
 # Deployment References
 
