@@ -2,19 +2,19 @@
   "schemaId": "azureMonitorCommonAlertSchema",
   "data": {
     "essentials": {
-      "alertId": "/subscriptions/d0075991-fdb6-4a2e-9d53-05fd3800cb79/providers/Microsoft.AlertsManagement/alerts/d2333f72-e4a9-4c96-9eb2-b289ce75b78d",
+      "alertId": "/subscriptions/<subscriptionId>/providers/Microsoft.AlertsManagement/alerts/d2333f72-e4a9-4c96-9eb2-b289ce75b78d",
       "alertRule": "alert-scaleset-platformrule",
       "severity": "Sev2",
       "signalType": "Metric",
       "monitorCondition": "Fired",
       "monitoringService": "Platform",
       "alertTargetIDs": [
-        "/subscriptions/d0075991-fdb6-4a2e-9d53-05fd3800cb79/resourcegroups/rg-wa-ecommerceapp-dev01/providers/microsoft.compute/virtualmachinescalesets/vmss-app-dev01"
+        "/subscriptions/<subscriptionId>/resourcegroups/rg-wa-ecommerceapp-dev01/providers/microsoft.compute/virtualmachinescalesets/vmss-app-dev01"
       ],
       "configurationItems": [
         "vmss-app-dev01"
       ],
-      "originAlertId": "d0075991-fdb6-4a2e-9d53-05fd3800cb79_RG-WA-ECommerceApp-Dev01_microsoft.insights_metricAlerts_alert-scaleset-platformrule_1871533069",
+      "originAlertId": "<subscriptionId>_RG-WA-ECommerceApp-Dev01_microsoft.insights_metricAlerts_alert-scaleset-platformrule_1871533069",
       "firedDateTime": "2021-07-12T14:16:15.7653538Z",
       "description": "",
       "essentialsVersion": "1.0",

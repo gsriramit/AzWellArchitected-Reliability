@@ -2,15 +2,15 @@
   "schemaId": "azureMonitorCommonAlertSchema",
   "data": {
     "essentials": {
-      "alertId": "/subscriptions/d0075991-fdb6-4a2e-9d53-05fd3800cb79/providers/Microsoft.AlertsManagement/alerts/56864b04-9060-4068-bf7a-fe6b6306f958",
+      "alertId": "/subscriptions/<subscriptionId>/providers/Microsoft.AlertsManagement/alerts/56864b04-9060-4068-bf7a-fe6b6306f958",
       "alertRule": "AppIns_failedcount",
       "severity": "Sev2",
       "signalType": "Metric",
       "monitorCondition": "Fired",
       "monitoringService": "Platform",
-      "alertTargetIDs": [ "/subscriptions/d0075991-fdb6-4a2e-9d53-05fd3800cb79/resourcegroups/rg-wa-ecommerceapp-dev01/providers/microsoft.insights/components/appinsights-web-eastus-dev01" ],
+      "alertTargetIDs": [ "/subscriptions/<subscriptionId>/resourcegroups/rg-wa-ecommerceapp-dev01/providers/microsoft.insights/components/appinsights-web-eastus-dev01" ],
       "configurationItems": [ "appinsights-web-eastus-dev01" ],
-      "originAlertId": "d0075991-fdb6-4a2e-9d53-05fd3800cb79_RG-WA-ECommerceApp-Dev01_microsoft.insights_metricAlerts_AppIns_failedcount_-71745050",
+      "originAlertId": "<subscriptionId>_RG-WA-ECommerceApp-Dev01_microsoft.insights_metricAlerts_AppIns_failedcount_-71745050",
       "firedDateTime": "2021-07-13T06:18:09.6703545Z",
       "description": "",
       "essentialsVersion": "1.0",

@@ -2,13 +2,13 @@
   "schemaId": "azureMonitorCommonAlertSchema",
   "data": {
     "essentials": {
-      "alertId": "/subscriptions/d0075991-fdb6-4a2e-9d53-05fd3800cb79/providers/Microsoft.AlertsManagement/alerts/758353bb-15f8-41af-9d2e-9027c4afd070",
+      "alertId": "/subscriptions/<subscriptionId>/providers/Microsoft.AlertsManagement/alerts/758353bb-15f8-41af-9d2e-9027c4afd070",
       "alertRule": "notifyvmscalesethealth",
       "severity": "Sev4",
       "signalType": "Activity Log",
       "monitorCondition": "Fired",
       "monitoringService": "Resource Health",
-      "alertTargetIDs": [ "/subscriptions/d0075991-fdb6-4a2e-9d53-05fd3800cb79/resourcegroups/rg-wa-ecommerceapp-dev01/providers/microsoft.compute/virtualmachinescalesets/vmss-app-dev01" ],
+      "alertTargetIDs": [ "/subscriptions/<subscriptionId>/resourcegroups/rg-wa-ecommerceapp-dev01/providers/microsoft.compute/virtualmachinescalesets/vmss-app-dev01" ],
       "configurationItems": [ "vmss-app-dev01" ],
       "originAlertId": "3bad0e39-eee6-45b5-adf6-06e08ac6bfa6_143afc1b24872db50533c1ab743f9642",
       "firedDateTime": "2021-07-09T08:00:47.3804512Z",
