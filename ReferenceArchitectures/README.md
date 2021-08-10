@@ -27,6 +27,12 @@ These are the steps that I used to avoid redundant manual work
    - If this image needs to be shared across multiple teams then the image can be saved to a Shared image Gallery and consumed from there
 11. Use this managed image for the creation of the VMSS. This ensures that when the scaleset scales out the newly created instance will have exactly the setup that is required for our application to continue to function with negligle to minimal latency (only what is required to spin a new a VM from the base image) 
 
+![Well-Archictected-Reliability - Scalesets-BaseImage](https://user-images.githubusercontent.com/13979783/128895595-b392253f-8337-4f86-b20d-4287faf27449.png)
+
+## Deploying WebApp and creating base images through GitHub action
+The following repo provides a more automated way to achieve the creation of the base image for the VM Scale Sets  
+https://github.com/Azure/build-vm-image#end-to-end-sample-workflows
+
 ### VMSS Zonal and Zone Redundant Deployments  
 https://github.com/Azure/vm-scale-sets/tree/master/preview/zones  
 Vmss fronted by load balancers and options to execute custom script  
