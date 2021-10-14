@@ -25,7 +25,7 @@ Following are the steps performed in the examining the system's availability.
    - [Request Data for Checkout](SLITestMetricsData/Userflow_Locate&AddToBasket_Query_15mins-Data.csv)
 6. SLI is calculated using the basic formula 
 > **(Total number of successful HTTP Requests)/(Total number of Requests)**
-7. Data that is captured for 15 minutes is now extrapolated for "N" hours. Please note that the test was run only for 15 minutes as this was sufficient for this prototype. In real-world, the load test needs to be run for multiple different durations (1, 8, 12 and 34) so as to get enough of data points to calculate the SLI for a considerably long uptime of the system 
+7. Data that is captured for 15 minutes is now extrapolated for "N" hours. Please note that the test was run only for 15 minutes as this was sufficient for this prototype. In real-world, the load test needs to be run for multiple different durations (1, 8, 12 and 24 hours) so as to get enough of data points to calculate the SLI for a considerably long uptime of the system 
 
 
 
