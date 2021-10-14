@@ -8,13 +8,15 @@
           "equals": "Microsoft.Network/applicationGateways"
         },
         {
+        "anyOf": [{
           "field": "zones",
           "exists": "false"
         }
-        //{
-        // "field": "zones",
-        //  "equals": "[parameters('allowedzoneids')]"
-        // }
+        {
+         "field": "zones",
+         "equals": "[parameters('allowedzoneids')]"
+        }]
+        }
       ]
     },
     "then": {
