@@ -16,7 +16,7 @@ const Home = () => {
     const {healthDataFromServer, updateSignalRUpdates} = bindActionCreators(actionCreators, dispatch);
     useEffect(() => {
         const connect = new HubConnectionBuilder()
-          .withUrl("https://azhealthmodelsystem-dev02.azurewebsites.net/api")
+          .withUrl(process.env.REACT_APP_API_SERVER_BASE_URL)
           .withAutomaticReconnect()
           .build();
     
