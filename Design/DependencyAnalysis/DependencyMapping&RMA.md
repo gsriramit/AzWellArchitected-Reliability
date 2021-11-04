@@ -26,4 +26,4 @@ User Flow: Read data for the catalog page and write data for item checkout
 # Microsoft Resiliency Modelling Analysis Diagram
 
 
-![RMA](/Reliability/Design/DependencyAnalysis/Images/FMEA_RMA.png)
+![RMA](/Design/DependencyAnalysis/Images/FMEA_RMA.png)

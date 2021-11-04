@@ -1,6 +1,6 @@
 # About this app
 
-This is the Health System Dashboard build in reactJS. The app will get the initial health data from the api and renders it in UI. Every updates in health status after that will be received via signalR notifications by connecting to the signalR hub. 
+This is the Health System Dashboard build in reactJS. The app will get the initial health data from the api and renders it in UI. Every update in health status after that will be received via signalR notifications by connecting to the signalR hub. 
 
 Both rest api base url and api code should be updated in the .env file in the repo's root directory.
 
