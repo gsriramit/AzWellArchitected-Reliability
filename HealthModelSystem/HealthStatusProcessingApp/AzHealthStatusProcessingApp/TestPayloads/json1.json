@@ -1,0 +1,50 @@
+{
+  "schemaId": "azureMonitorCommonAlertSchema",
+  "data": {
+    "essentials": {
+      "alertId": "/subscriptions/695471ea-1fc3-42ee-a854-eab6c3009516/providers/Microsoft.AlertsManagement/alerts//subscriptions/695471ea-1fc3-42ee-a854-eab6c3009516/resourcegroups/rg-azconfdev-21/providers/microsoft.compute/virtualmachines/vm-web-dev01/providers/Microsoft.AlertsManagement/alerts/279ca573-6135-4969-835b-f1cd3dd356e0",
+      "alertRule": "alert-scaleset-platformrule",
+      "severity": "Sev2",
+      "signalType": "Metric",
+      "monitorCondition": "Fired",
+      "monitoringService": "Platform",
+      "alertTargetIDs": [
+        "/subscriptions/695471ea-1fc3-42ee-a854-eab6c3009516/resourceGroups/rg-azconfdev-21/providers/Microsoft.Compute/virtualMachines/vm-web-dev01"
+      ],
+      "configurationItems": [
+        "vmss-app-dev01"
+      ],
+      "originAlertId": "695471ea-1fc3-42ee-a854-eab6c3009516_RG-WA-ECommerceApp-Dev01_microsoft.insights_metricAlerts_alert-scaleset-platformrule_1871533069",
+      "firedDateTime": "2021-27-10T14:16:15.7653538Z",
+      "description": "",
+      "essentialsVersion": "1.0",
+      "alertContextVersion": "1.0"
+    },
+    "alertContext": {
+      "properties": null,
+      "conditionType": "SingleResourceMultipleMetricCriteria",
+      "condition": {
+        "windowSize": "PT1M",
+        "allOf": [
+          {
+            "metricName": "Percentage CPU",
+            "metricNamespace": "Microsoft.Compute/virtualMachineScaleSets",
+            "operator": "GreaterThan",
+            "threshold": "70",
+            "timeAggregation": "Average",
+            "dimensions": [
+              {
+                "name": "VMName",
+                "value": "vm-web-dev01"
+              }
+            ],
+            "metricValue": 76.085,
+            "webTestName": null
+          }
+        ],
+        "windowStartTime": "2021-10-27T14:12:07.813Z",
+        "windowEndTime": "2021-10-27T14:13:07.813Z"
+      }
+    }
+  }
+}

@@ -27,8 +27,8 @@ namespace AzHealthStatusProcessingApp.HealthAlertModels.PlatfromMetrics
         public string monitoringService { get; set; }
         public string[] alertTargetIDs { get; set; }
         public string originAlertId { get; set; }
-        public DateTime firedDateTime { get; set; }
-        public DateTime resolvedDateTime { get; set; }
+        public string firedDateTime { get; set; }
+        public string resolvedDateTime { get; set; }
         public string description { get; set; }
         public string essentialsVersion { get; set; }
         public string alertContextVersion { get; set; }
