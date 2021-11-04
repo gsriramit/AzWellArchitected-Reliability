@@ -13,7 +13,7 @@ https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/n-ti
 
 # Sections
 
-1. [Reference Architecure](ReferenceArchitectures) 
+1. [Reference Architecture](ReferenceArchitectures) 
 2. [Requirement Analysis](Requirements)
    - Availability Targets     
    - Recovery Targets
